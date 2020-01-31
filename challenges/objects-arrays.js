@@ -36,7 +36,7 @@ const veloc = {
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(tRex.weight);
+console.log("here", tRex.weight);
 
 // What was the diet of a velociraptor?
 console.log(veloc.diet);
@@ -72,11 +72,13 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+
 const universities = graduates.map(function(item){
   return item.university;
 });
 console.log(universities);
+
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -91,12 +93,14 @@ graduates.forEach(function(item){
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-function unisWith(item, list, cb){
-const UnisWithUni = list.includes(item)
-return callback(UnisWithUni);
+const unisWithUni = [];
+  for(let i = 0; i < graduates.length; i++){
+   if(graduates[i].university.includes("Uni")){
+   unisWithUni.push(graduates[i].university);
+  };
 }
+console.log(unisWithUni); 
 
-console.log(unisWith);
 
 
 // ==== ADVANCED Array Methods ====
